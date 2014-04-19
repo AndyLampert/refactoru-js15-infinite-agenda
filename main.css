@@ -8,17 +8,37 @@ html {
   padding: 0;
 }
 
+.main-container,
+.date,
 .editable {
-  display: block;
-  width: 80%;
-  max-width: 500px;
   height: 5rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.date {
+  height: 1rem;
+}
+
+.editable {
+  height: 4rem;
+}
+
+.main-container {
+  display: block;
+  max-width: 500px;
   background-color: lightgrey;
   color: black;
-  margin: 5% auto;
   position: relative;
 }
 
-.specific-date {
-  position: absolute;
+.date {
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid pink;
+}
+
+.editable {
+  border: 1px solid black;
+  width: 100%;
 }

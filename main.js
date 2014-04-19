@@ -1,6 +1,5 @@
 $(document).on('ready', function(){
 	var date = new Date().toDateString();
-	
 
 
 
@@ -42,6 +41,7 @@ $(document).on('ready', function(){
 
 			//REMOVE TEXTAREA AND DISPLAY ITEM
 			$(this).remove();
+			$('.editable').css('height', $(this).css('height'));
 			$('.editable').css('display', displayType);
 
 		});
