@@ -1,7 +1,8 @@
 $(document).on('ready', function(){
-	var date = new Date().toDateString();
-
-
+	var customDate = new Date().toDateString();
+	// append customeDate to the .cal-date 
+	
+	$('.cal-date').text(customDate);
 
 
 	// Edit in place function
