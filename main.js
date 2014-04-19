@@ -1,9 +1,15 @@
 $(document).on('ready', function(){
-	var customDate = new Date().toDateString();
-	// append customeDate to the .cal-date 
-	
-	$('.cal-date').text(customDate);
+	var customDate = new Date();
 
+	function addDays(myDate, days) {
+		return new Date(myDate.getTime() + days * 24 * 60 * 60 * 1000);
+	}
+	// append customeDate to the .cal-date 
+
+	// puts the customeDate in the .cal-date div
+	
+
+	$('.cal-date').text(customDate);
 
 	// Edit in place function
 	var makeEditable = function () {
@@ -42,7 +48,7 @@ $(document).on('ready', function(){
 
 			//REMOVE TEXTAREA AND DISPLAY ITEM
 			$(this).remove();
-			$('.editable').css('height', $(this).css('height'));
+			$('.editable').css('height', $('.inputBox').css('height'));
 			$('.editable').css('display', displayType);
 
 		});
@@ -53,5 +59,13 @@ $(document).on('ready', function(){
 
 
 
-// Kelsey's edit in place
 
+// TASKS
+// 1) GET DATE to dynamically add when appending (column of divs should each be one day)
+// 2) will need to create a function that updates the date
+//    then append new days as we scroll will need to keep adding days
+
+
+
+// 
+// 
