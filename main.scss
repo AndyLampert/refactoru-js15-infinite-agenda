@@ -1,4 +1,23 @@
+*, *:before, *:after {
+	box-sizing: border-box;         /* Opera/IE 8+ */
+} 
+
 html {
 	margin: 0;
 	padding: 0;
+}
+
+.editable {
+	display: block;
+	width: 80%;
+	max-width: 500px;
+	height: 5rem;
+	background-color: lightgrey;
+	color: black;
+	margin: 5% auto;
+	position: relative;
+}
+
+.specific-date {
+	position: absolute;
 }
