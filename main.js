@@ -1,13 +1,37 @@
 $(document).on('ready', function(){
 	var customDate = new Date();
 
-	function addDays(myDate, days) {
+	function updateDate(myDate, days) {
 		return new Date(myDate.getTime() + days * 24 * 60 * 60 * 1000);
 	}
 	// append customeDate to the .cal-date 
 
-	// puts the customeDate in the .cal-date div
-	
+	var addDay = function() {
+		// when the user scrolls to the bottom, append 1 (7) new container divs
+		var mainContainer = $('<div class="main-container"></div>');
+		// var appendCalDate = $('.main-container').append('<div class="cal-date"></div>');
+		// var appendEditable = $('.main-container').append('<div class="editable"></div>');
+		var calDateItem = $('<div class="cal-date"></div>');
+		var editableItem = $('<div class="editable"></div>');
+		mainContainer.append(calDateItem);
+		mainContainer.append(editableItem);
+
+		// creating a div /w class main-container
+		// 	create cal-date div within container
+
+		// set the cal-date text to the updateDate function
+		// will also have to call the date function (under cal-date)
+
+		// 	create editable div within container
+		// append the whole main-container to our html
+
+		// increment the counter after we call updateDate 
+		// (b/c our first one will be 0 (ie, today's date))
+
+
+	}
+
+	// put the customeDate in the .cal-date div
 
 	$('.cal-date').text(customDate);
 
